@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
 }
@@ -8,6 +7,11 @@ body {
   font-family: Arial, sans-serif;
   background: #fffaf3;
   color: #333;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .navbar {
@@ -37,7 +41,30 @@ body {
 
 .subtitle {
   color: #777;
+  margin-bottom: 25px;
+}
+
+.search {
+  width: 100%;
+  max-width: 420px;
   margin-bottom: 35px;
+  padding: 12px 20px;
+  font: inherit;
+  border: 1px solid #f0e2d0;
+  border-radius: 999px;
+  background: #fff;
+  outline: none;
+}
+
+.search:focus {
+  border-color: #ff7043;
+  box-shadow: 0 0 0 2px rgba(255, 112, 67, 0.2);
+}
+
+.empty {
+  padding: 30px 0;
+  color: #777;
+  font-size: 1.1rem;
 }
 
 .grid {
@@ -47,19 +74,29 @@ body {
 }
 
 .card {
+  display: block;
   background: white;
   padding: 25px;
   border-radius: 15px;
   box-shadow: 0 3px 12px #ddd;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
 }
 
 .card-art {
   font-size: 65px;
   padding: 20px;
+  text-align: center;
 }
 
 .card h3 {
   color: #e85d35;
+  margin: 10px 0;
 }
 
 .card-meta {
@@ -67,4 +104,59 @@ body {
   flex-direction: column;
   gap: 10px;
   color: #777;
+}
+
+.detail {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.detail .back {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #e85d35;
+  font-weight: 600;
+}
+
+.detail-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 180px;
+  margin-bottom: 20px;
+  font-size: 5rem;
+  background: #ffe9d1;
+  border-radius: 15px;
+}
+
+.detail h1 {
+  color: #e85d35;
+  margin-bottom: 15px;
+}
+
+.detail .card-meta {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.detail .card-meta span {
+  background: #ffe9d1;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.detail h2 {
+  margin: 25px 0 10px;
+  color: #333;
+}
+
+.detail ul,
+.detail ol {
+  padding-left: 24px;
+  line-height: 1.8;
+  color: #555;
 }
